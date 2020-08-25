@@ -14,3 +14,9 @@ for char in "sjfoahrv":
 for i in range(len(greeting)):
     char = greeting[i]
     print(char)
+
+for i in range(1, 50):
+    if i % 3 == 0:
+        print("fizz")
+    else:
+        print(i)
