@@ -13,7 +13,9 @@
 1. Write a Python program which iterates the integers from 1 to 50. 
  For multiples of three print `"Fizz"` instead of the number and for the 
  multiples of five print `"Buzz"`. For numbers which are multiples of both three
- and five print `"FizzBuzz"`. If the number 30 is encountered, b
+ and five print `"FizzBuzz"`. If the number 30 is encountered, break the loop.
+ 
+ 
 ### `try` statement exercises
 1. Write a program to read two numbers: `x` and `y` from standard input and print the result of `x / y`. 
 If the user inputs invalid data, display an error message and exit gracefully. 
