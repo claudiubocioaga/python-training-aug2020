@@ -36,6 +36,9 @@ for word in set(words):
     occurrences[word] = words.count(word)
 print(occurrences)
 
+# Version 1.5 (dict comprehension)
+print({word: words.count(word) for word in set(words)})
+
 # Version 2
 occurrences = {}
 for word in words:

@@ -42,7 +42,7 @@ Keys range from "a" to "e".
 1. Can you obtain dictionary from ex. 3 from the given string (`"abcde"`) in a single dict comprehension? 
 
 ### Generators exercises
-1. Create a generator function that receives a parameter `max_nr` and returns a random number between `1` and `max_nr`, indefinitely. 
+1. Create a generator function that receives a parameter `max_nr` and yields a random number between `1` and `max_nr`, indefinitely. 
     ```python
     >>> import random
     >>> random.randint(1, 10)  # returns a random integer between 1 and 10
