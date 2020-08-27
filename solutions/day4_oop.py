@@ -13,7 +13,22 @@ class BankAccount:
 
 
 class Employee:
-    pass
+    def __init__(self, name: str, bank_account: BankAccount, salary: int = 0):
+        self.name = name
+        self.bank_account = bank_account
+        self._salary = salary
+
+    @property
+    def salary(self):
+        return self._salary
+
+    def raise_salary(self, percent):
+        if percent not in (5, 10, 20):
+            raise ValueError(f'Invalid raise value: {percent}%')
+        self._salary += (percent / 100) * self._salary
+
+    def receive_salary(self):
+        self.bank_account.deposit(self._salary)
 
 
 if __name__ == '__main__':

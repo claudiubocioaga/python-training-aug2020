@@ -28,6 +28,15 @@ class Person:
         return self.date_of_birth == other.date_of_birth
 
 
+class Student(Person):
+    def __init__(self, name, date_of_birth, university):
+        super().__init__(name, date_of_birth)
+        self.university = university
+
+    def __str__(self):
+        return f'name={self.name}, age={self.age}, university={self.university}'
+
+
 # Set attribute: object.attribute = value
 # Get attribute: object.attribute
 # Delete attribute: del object.attribute
@@ -44,3 +53,10 @@ if __name__ == '__main__':
         print(f'{p1.name} is {p1.age} years old.')
     else:
         print(f'{p1.name} is older than {p2.name}')
+
+    s = Student('Maria', date(1998, 3, 5), 'Universitatea București')
+    print(s)
+    if s < p1:
+        print(f'{s.name} is younger than {p1.name}')
+    else:
+        print(f'{s.name} is older than {p1.name}')
