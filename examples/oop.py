@@ -10,14 +10,15 @@ class Person:
         self.name = name  # instance variable
         self.date_of_birth = date_of_birth
 
-    def get_age(self):  # instance method
+    @property
+    def age(self):
         diff = date.today() - self.date_of_birth
         return int(diff.days / 365.25)
 
     def __str__(self):
         return (
             f'name={self.name}, date_of_birth={self.date_of_birth}, '
-            f'age={self.get_age()}'
+            f'age={self.age}'
         )
 
     def __lt__(self, other):
@@ -40,5 +41,6 @@ if __name__ == '__main__':
 
     if p1 < p2:
         print(f'{p1.name} is younger than {p2.name}')
+        print(f'{p1.name} is {p1.age} years old.')
     else:
         print(f'{p1.name} is older than {p2.name}')
