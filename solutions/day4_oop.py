@@ -12,6 +12,10 @@ class BankAccount:
         self.balance -= amount
 
 
+class Employee:
+    pass
+
+
 if __name__ == '__main__':
     bank_acc = BankAccount('BRD', 100)  # create instance
     print('Initial balance:', bank_acc.balance)
@@ -24,3 +28,11 @@ if __name__ == '__main__':
     except Exception as ex:
         print(ex)
     print('Balance after trying to withdraw 100:', bank_acc.balance)
+
+    emp = Employee("John Doe", bank_acc, 1000)
+    emp.raise_salary(10)
+    print(emp.salary)  # should print 1100
+    emp.receive_salary()
+    print(emp.bank_account.balance)  # should print 1180 (80 before salary + salary)
+    emp.salary = 2000  # should raise exception (can't set attribute)
+
