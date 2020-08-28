@@ -27,6 +27,9 @@ class Person:
     def __eq__(self, other):
         return self.date_of_birth == other.date_of_birth
 
+    def bla(self, x):
+        print(x)
+
 
 class Student(Person):
     def __init__(self, name, date_of_birth, university):
@@ -35,6 +38,10 @@ class Student(Person):
 
     def __str__(self):
         return f'name={self.name}, age={self.age}, university={self.university}'
+
+    def bla(self, x, y):
+        super().bla(x)
+        print(x, y)
 
 
 # Set attribute: object.attribute = value
@@ -60,3 +67,5 @@ if __name__ == '__main__':
         print(f'{s.name} is younger than {p1.name}')
     else:
         print(f'{s.name} is older than {p1.name}')
+
+    s.bla(1, 2)
